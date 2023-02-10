@@ -1,0 +1,98 @@
+/**************************** fullscreen buttons *************************/ 
+
+pre .fullscreen-button{
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  border: 0;
+  margin-top: 7px;
+  margin-right: 5px;
+  background-color: transparent;
+  display: none;
+}
+
+div#fullscreen-box pre .fullscreen-button {
+  right: 0;
+}
+
+
+.reveal-full-page div#fullscreen-box pre .fullscreen-button {
+  right: 15px;
+}
+
+pre:hover .fullscreen-button {
+  display: block;
+}
+
+div#fullscreen-box:hover .fullscreen-button {
+  display: block;
+}
+
+
+pre .fullscreen-button .fullscreen-icon {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen" viewBox="0 0 16 16"><path d="M1.5 1a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1h-4zM10 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zM.5 10a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 0 14.5v-4a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5z"/></svg>');
+}
+
+div#fullscreen-box pre .fullscreen-button .fullscreen-exit-icon {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-fullscreen-exit" viewBox="0 0 16 16"><path d="M5.5 0a.5.5 0 0 1 .5.5v4A1.5 1.5 0 0 1 4.5 6h-4a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 1 .5-.5zm5 0a.5.5 0 0 1 .5.5v4a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-4A1.5 1.5 0 0 1 10 4.5v-4a.5.5 0 0 1 .5-.5zM0 10.5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 6 11.5v4a.5.5 0 0 1-1 0v-4a.5.5 0 0 0-.5-.5h-4a.5.5 0 0 1-.5-.5zm10 1a1.5 1.5 0 0 1 1.5-1.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 0-.5.5v4a.5.5 0 0 1-1 0v-4z"/></svg>');
+}
+
+/**************************** fullscreen buttons *************************/ 
+
+
+
+/*************************** div#fullscreen-box **************************/
+
+div#fullscreen-box {
+  margin: 0;
+  padding: 0;
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100svmax;
+  display: none;
+  background-color: rgba(233,236,239);
+}
+
+div#fullscreen-box.visible{
+    display: block;
+}
+
+div#fullscreen-box pre.sourceCode {
+  background-color: rgba(233,236,239);
+}
+
+div#fullscreen-box code {
+  padding-top: 0.3rem ;
+  padding-bottom: 1.5rem;
+}
+
+
+div#fullscreen-box pre code span a {
+  pointer-events: none;
+}
+
+div#fullscreen-box code {
+  font-family: var(--r-code-font);
+}
+
+div#fullscreen-box pre.numberSource code > span > a:first-child::before {
+    left: -1.2em !important;
+}
+
+div#fullscreen-box pre.numberSource {
+  border-left: 1px solid #aaaaaa !important;
+  border-radius: 0;
+  margin-left: 4em;
+}
+
+body.reveal-viewport:has(div#fullscreen-box) {
+  overflow: overlay;
+}
+
+.reveal-full-page div#fullscreen-box {
+  height: unset !important;
+}
