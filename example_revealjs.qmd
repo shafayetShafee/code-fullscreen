@@ -2,7 +2,7 @@
 title: "Code-fullscreen Example"
 author: Shafayet Khan Shafee
 date: last-modified
-data-format: "DD MMM, YYYY"
+date-format: "DD MMM, YYYY"
 format: revealjs
 filters:
   - code-fullscreen

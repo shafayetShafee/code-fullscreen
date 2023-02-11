@@ -1,12 +1,19 @@
 /* 
-code taken from https://github.com/mkordulewski/reveal.js-fullscreen-code/blob/master/reveal.js-fullscreen-code.js
-
-and then modifed
+code modified from https://github.com/mkordulewski/reveal.js-fullscreen-code/blob/master/reveal.js-fullscreen-code.js
 */
 
+// creating the fullscreen box
 $('body').append("<div id='fullscreen-box'><pre class='sourceCode numberSource number-lines'><code class='sourceCode'></code></pre></div>" );
-$('pre code').before("<button title='Fullscreen' class='fullscreen-button'><a href='#fullscreen-box'><i class='fullscreen-icon'></a></i></button>");
-$('div#fullscreen-box button.fullscreen-button').replaceWith("<button title='Exit Fullscreen' class='fullscreen-button'><a href='#'><i class='fullscreen-exit-icon'></i></a></button>")
+
+// for revealjs do not link the button
+if ($('div.reveal').length) {
+  $('pre code').before("<button title='Fullscreen' class='fullscreen-button'><i class='fullscreen-icon'></i></button>");
+  $('div#fullscreen-box button.fullscreen-button').replaceWith("<button title='Exit Fullscreen' class='fullscreen-button'><i class='fullscreen-exit-icon'></i></button>")
+} else {
+  // create buttons with links
+  $('pre code').before("<button title='Fullscreen' class='fullscreen-button'><a href='#fullscreen-box'><i class='fullscreen-icon'></a></i></button>");
+  $('div#fullscreen-box button.fullscreen-button').replaceWith("<button title='Exit Fullscreen' class='fullscreen-button'><a href='#'><i class='fullscreen-exit-icon'></i></a></button>")
+}
 
 var fullscreenBoxVisible = false;
 $('button.fullscreen-button').click(function(e){
@@ -21,24 +28,19 @@ $('button.fullscreen-button').click(function(e){
         fullscreenBoxVisible = true;
         let box_height = Math.max($('div#fullscreen-box pre').outerHeight(), $(document).height())
         $('div#fullscreen-box').height(box_height);
-        let id = this.parentElement.parentElement.id;
-        let id_string = `#${id}`;
-        $('div#fullscreen-box button.fullscreen-button a').attr("href", id_string);
-    }
-   setTimeout(function() {
-     if (!fullscreenBoxVisible) {
-       $('div#fullscreen-box button.fullscreen-button a').attr("href", "#fullscreen-box");
-     }
-   }, 100);
-});
-
-
-/*
-function guidGenerator() {
-  // code from https://stackoverflow.com/questions/6860853/generate-random-string-for-div-id
-    var S4 = function() {
-       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+        // attach links for html (not revealjs)
+        if (!$('div.reveal').length) {
+          let id = this.parentElement.parentElement.id;
+          let id_string = `#${id}`;
+          $('div#fullscreen-box button.fullscreen-button a').attr("href", id_string); 
+        };
     };
-    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
-}
-*/
+  // slow the link changing only for html
+  if (!$('div.reveal').length) {
+     setTimeout(function() {
+       if (!fullscreenBoxVisible) {
+         $('div#fullscreen-box button.fullscreen-button a').attr("href", "#fullscreen-box");
+       }
+     }, 100);
+  };
+});
