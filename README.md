@@ -1,6 +1,6 @@
 # Code-fullscreen Extension For Quarto
 
-Adds a fullscreen button in the code blocks in revealjs slides and html documents.
+`code-fullscreen` is [Quarto](https://quarto.org/) filter that adds a fullscreen button in the code blocks in revealjs slides and html documents.
 
 [`View live demo`](https://shafayetshafee.github.io/code-fullscreen/example_revealjs.html)
 
@@ -24,7 +24,7 @@ filters:
   - code-fullscreen
 ```
 
-The a [fullscreen](https://icons.getbootstrap.com/icons/fullscreen/) button will be added in top right corner of each code blocks. 
+Then a [fullscreen](https://icons.getbootstrap.com/icons/fullscreen/) button will be added in top right corner of each code blocks. 
 
 ## Example
 
