@@ -5,8 +5,7 @@ and then modifed
 */
 
 $('body').append("<div id='fullscreen-box'><pre class='sourceCode numberSource number-lines'><code class='sourceCode'></code></pre></div>" );
-$('div.cell-code pre code').before("<button title='Fullscreen' class='fullscreen-button'><i class='fullscreen-icon'></i></button>" );
-$('div#fullscreen-box pre code').before("<button title='Fullscreen' class='fullscreen-button'><i class='fullscreen-icon'></i></button>" );
+$('pre code').before("<button title='Fullscreen' class='fullscreen-button'><i class='fullscreen-icon'></i></button>");
 $('div#fullscreen-box button.fullscreen-button').replaceWith("<button title='Exit Fullscreen' class='fullscreen-button'><i class='fullscreen-exit-icon'></i></button>")
 
 var fullscreenBoxVisible = false;

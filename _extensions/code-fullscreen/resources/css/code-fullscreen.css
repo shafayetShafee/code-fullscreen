@@ -96,3 +96,14 @@ body.reveal-viewport:has(div#fullscreen-box) {
 .reveal-full-page div#fullscreen-box {
   height: unset !important;
 }
+
+body:has(div#fullscreen-box.visible) {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+}
+
+
+body:has(div#fullscreen-box.visible)::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
