@@ -1,6 +1,6 @@
 /**************************** fullscreen buttons *************************/ 
 
-pre .fullscreen-button{
+pre .fullscreen-button {
   z-index: 5;
   position: absolute;
   top: 0;
@@ -13,11 +13,17 @@ pre .fullscreen-button{
 }
 
 div#fullscreen-box pre .fullscreen-button {
+  position: fixed;
   right: 0;
 }
 
+.reveal-full-page pre .fullscreen-button {
+  margin-top: 5px;
+}
 
 .reveal-full-page div#fullscreen-box pre .fullscreen-button {
+  position: fixed;
+  margin-top: 7px;
   right: 15px;
 }
 
@@ -97,13 +103,22 @@ body.reveal-viewport:has(div#fullscreen-box) {
   height: unset !important;
 }
 
-body:has(div#fullscreen-box.visible) {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+.reveal-full-page div#fullscreen-box pre.numberSource {
+  border-left: 1px solid #aaaaaa !important;
+  border-radius: 0;
+  margin-left: 3em;
 }
 
+/*body:has(div#fullscreen-box.visible) {
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+}
 
-body:has(div#fullscreen-box.visible)::-webkit-scrollbar { /* WebKit */
+*/
+
+
+/*body:has(div#fullscreen-box.visible)::-webkit-scrollbar { 
     width: 0;
     height: 0;
 }
+*/
