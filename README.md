@@ -1,13 +1,15 @@
 # Code-fullscreen Extension For Quarto
 
-_TODO_: Add a short description of your extension.
+Adds a fullscreen button in the code blocks in revealjs slides and html documents.
+
+[`View live demo`](https://shafayetshafee.github.io/code-fullscreen/example_revealjs.html)
 
 ## Installing
 
-_TODO_: Replace the `<github-organization>` with your GitHub organization.
+:warning: This extension requires Quarto version to be at least 1.2
 
 ```bash
-quarto add <github-organization>/code-fullscreen
+quarto add shafayetShafee/code-fullscreen
 ```
 
 This will install the extension under the `_extensions` subdirectory.
@@ -15,9 +17,18 @@ If you're using version control, you will want to check in this directory.
 
 ## Using
 
-_TODO_: Describe how to use your extension.
+Simply use the filter in the document yaml section.
+
+```
+filters:
+  - code-fullscreen
+```
+
+The a [fullscreen](https://icons.getbootstrap.com/icons/fullscreen/) button will be added in top right corner of each code blocks. 
 
 ## Example
 
-Here is the source code for a minimal example: [example.qmd](example.qmd).
+- The source codes for a example of html format: [example.qmd](example.qmd) and [rendered html document](https://shafayetshafee.github.io/code-fullscreen/example.html)
+
+- The source code for a example revealjs Slides [example_revealjs.qmd](example_revealjs.qmd) and [rendered slides](https://shafayetshafee.github.io/code-fullscreen/example_revealjs.html)
 

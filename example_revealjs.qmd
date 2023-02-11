@@ -10,6 +10,10 @@ execute:
   echo: true
 ---
 
+## Usage
+
+View the codes in fullscreen by clicking the fullscreen button on top right corner of the code block (Hover the mouse pointer upon the code block, you will see the fullscreen button.)
+
 ## Very Long R code
 
 
