@@ -108,17 +108,3 @@ body.reveal-viewport:has(div#fullscreen-box) {
   border-radius: 0;
   margin-left: 3em;
 }
-
-/*body:has(div#fullscreen-box.visible) {
-  scrollbar-width: none;
-  -ms-overflow-style: none; 
-}
-
-*/
-
-
-/*body:has(div#fullscreen-box.visible)::-webkit-scrollbar { 
-    width: 0;
-    height: 0;
-}
-*/

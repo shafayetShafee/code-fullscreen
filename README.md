@@ -32,3 +32,7 @@ The a [fullscreen](https://icons.getbootstrap.com/icons/fullscreen/) button will
 
 - The source code for a example revealjs Slides [example_revealjs.qmd](example_revealjs.qmd) and [rendered slides](https://shafayetshafee.github.io/code-fullscreen/example_revealjs.html)
 
+
+## Acknowledgement
+
+The internal js and css code taken and modified from [Reveal.js fullscreen code plugin](https://github.com/mkordulewski/reveal.js-fullscreen-code).
