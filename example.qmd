@@ -11,6 +11,7 @@ code-line-numbers: true
 format: 
   html:
     code-tools: true
+embed-resources: true
 ---
 
 > View the source code of this document by clicking `</> Code` on the top-right corner.
