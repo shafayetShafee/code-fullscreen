@@ -1,4 +1,0 @@
-* linguist-vendored
-*.lua linguist-vendored=false
-_extensions/code-fullscreen/resources/css/code-fullscreen.css linguist-vendored=false
-_extensions/code-fullscreen/resources/js/code-fullscreen.js linguist-vendored=false
