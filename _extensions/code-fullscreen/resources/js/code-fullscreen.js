@@ -2,6 +2,14 @@
 code modified from https://github.com/mkordulewski/reveal.js-fullscreen-code/blob/master/reveal.js-fullscreen-code.js
 */
 
+/**
+ * code-fullscreen
+ * A filter that add a fullscreen button in code chunk.
+ * 
+ * MIT License
+ * Copyright (c) 2023 Shafayet Khan Shafee.
+ */
+
 function fullscreen_code() {
   // creating the fullscreen box
   $('body').append("<div id='fullscreen-box'><pre class='sourceCode numberSource number-lines'><code class='sourceCode'></code></pre></div>" );
@@ -27,7 +35,8 @@ function fullscreen_code() {
           $('div#fullscreen-box pre code').html(code);
           $('div#fullscreen-box').toggleClass('visible');
           fullscreenBoxVisible = true;
-          let box_height = Math.max($('div#fullscreen-box pre').outerHeight(), $(document).height())
+          var box_height = Math.max($('div#fullscreen-box pre').outerHeight(), $(document).height());
+          $('div#fullscreen-box pre').height(box_height);
           $('div#fullscreen-box').height(box_height);
           // attach links for html (not revealjs)
           if (!$('div.reveal').length) {
