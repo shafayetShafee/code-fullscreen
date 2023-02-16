@@ -31,6 +31,10 @@ pre:hover .fullscreen-button {
   display: block;
 }
 
+div.sourceCode.cell-code:hover .fullscreen-button {
+  display: block;
+}
+
 div#fullscreen-box:hover .fullscreen-button {
   display: block;
 }
@@ -107,4 +111,26 @@ body.reveal-viewport:has(div#fullscreen-box) {
   border-left: 1px solid #aaaaaa !important;
   border-radius: 0;
   margin-left: 3em;
+}
+
+
+/********************** for mobile devices ****************************/
+
+@media only screen and (max-width: 992px) {
+  div#fullscreen-box {
+    font-size: 1.5vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  div#fullscreen-box pre.numberSource code > span {
+    left: -5em !important;
+  }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  div#fullscreen-box pre.numberSource code > span {
+    left: -4.5em !important;
+  }
+
 }

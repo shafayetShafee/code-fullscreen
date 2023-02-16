@@ -27,7 +27,8 @@ function fullscreen_code() {
           $('div#fullscreen-box pre code').html(code);
           $('div#fullscreen-box').toggleClass('visible');
           fullscreenBoxVisible = true;
-          let box_height = Math.max($('div#fullscreen-box pre').outerHeight(), $(document).height())
+          var box_height = Math.max($('div#fullscreen-box pre').outerHeight(), $(document).height());
+          $('div#fullscreen-box pre').height(box_height);
           $('div#fullscreen-box').height(box_height);
           // attach links for html (not revealjs)
           if (!$('div.reveal').length) {
