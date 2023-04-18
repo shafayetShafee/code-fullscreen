@@ -108,8 +108,10 @@ div#fullscreen-box pre.numberSource {
   margin-left: 4em;
 }
 
+
+/* using `auto` instead of `overlay` */
 body.reveal-viewport:has(div#fullscreen-box) {
-  overflow: overlay;
+  overflow: auto;
 }
 
 .reveal-full-page div#fullscreen-box {
@@ -119,7 +121,7 @@ body.reveal-viewport:has(div#fullscreen-box) {
 .reveal-full-page div#fullscreen-box pre.numberSource {
   border-left: 1px solid #aaaaaa !important;
   border-radius: 0;
-  margin-left: 3em;
+  margin-left: 4em;
 }
 
 
