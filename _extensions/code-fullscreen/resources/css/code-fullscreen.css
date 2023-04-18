@@ -110,8 +110,8 @@ div#fullscreen-box pre.numberSource {
 
 
 /* using `auto` instead of `overlay` */
-body.reveal-viewport:has(div#fullscreen-box) {
-  overflow: auto;
+body.reveal-viewport {
+  overflow: auto !important;
 }
 
 .reveal-full-page div#fullscreen-box {
