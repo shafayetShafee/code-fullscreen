@@ -114,6 +114,12 @@ body.reveal-viewport {
   overflow: auto !important;
 }
 
+/* for modal that open when clicking on </> Code button on html */
+body.modal-open {
+  overflow: auto !important;
+}
+
+
 .reveal-full-page div#fullscreen-box {
   height: unset !important;
 }
