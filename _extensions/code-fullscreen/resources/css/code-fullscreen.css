@@ -108,9 +108,17 @@ div#fullscreen-box pre.numberSource {
   margin-left: 4em;
 }
 
-body.reveal-viewport:has(div#fullscreen-box) {
-  overflow: overlay;
+
+/* using `auto` instead of `overlay` */
+body.reveal-viewport {
+  overflow: auto !important;
 }
+
+/* for modal that open when clicking on </> Code button on html */
+body.modal-open {
+  overflow: auto !important;
+}
+
 
 .reveal-full-page div#fullscreen-box {
   height: unset !important;
@@ -119,7 +127,7 @@ body.reveal-viewport:has(div#fullscreen-box) {
 .reveal-full-page div#fullscreen-box pre.numberSource {
   border-left: 1px solid #aaaaaa !important;
   border-radius: 0;
-  margin-left: 3em;
+  margin-left: 4em;
 }
 
 
